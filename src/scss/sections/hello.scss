@@ -1,0 +1,188 @@
+.hello {
+  background-image: url('../img/first/bgfirst.jpg');
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+  position: relative;
+}
+.section__scroll {
+width: rem(29px);
+height: rem(14px);
+position: absolute;
+top: 95%;
+left: 45%;
+&__link {
+  display: flex;
+}
+}
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: rem(10px);
+  @include tablets {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // @include phones {
+    //   padding: left 3%;
+    //   padding-right: 3%;
+    // }
+    
+  }
+}
+
+.header__logo {
+  margin-right: auto;
+  display: block;
+}
+
+.navigation {
+  margin-right: rem(15px);
+  display: flex;
+}
+
+.navigation__item {
+  display: flex;
+  vertical-align: middle;
+  white-space: nowrap;
+  align-items: center;
+  &:after {
+    display: flex;
+    vertical-align: middle;
+    content: "";
+    @include circle(rem(5px),
+    white);
+    margin-left: rem(12px);
+    margin-right: rem(12px);
+    display: flex;
+  }
+  &:last-child:after {
+    display: none;
+  }
+}
+.navigation__list {
+  display: flex;
+}
+.navigation__link {
+  color: #ffffff;
+  font-family: Ubuntu;
+  font-size: rem(13px);
+  font-weight: 500;
+  display: block;
+  text-transform: uppercase;
+  transition: 3s;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.hello__content {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 5%;
+  @include tablets {
+    flex-direction: column;
+    align-items: center;
+    @include phones {
+      padding-top: 0;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column; 
+      // padding-left: 3%;
+      // padding-right: 3%;
+    }
+  }
+}
+.hello__img, .hello__description {
+display: flex;
+width: 50%;
+@include phones {
+  width: 100%;
+}
+}
+
+.hello__description {
+  flex-direction: column;
+  justify-content: center;
+  @include tablets {
+    text-align: center;
+    @include phones {
+      padding-bottom: 10%;
+    }
+  }
+}
+
+.section-title_first {
+  margin-bottom: rem(50px);
+  @extend %title;
+  @include tablets{
+    padding-top: 0;
+  }
+  @include phones {
+    font-size: rem(50px);
+    margin-bottom: 0;
+  }
+}
+.description__content {
+  font-family: Lifehack;
+  color: #ffffff;
+  font-size: rem(58px);
+  font-weight: 500;
+  line-height: 1;
+  @include phones {
+  font-size: rem(45px);
+  }
+  
+}
+
+.logo {
+  display: block;
+}
+
+.header__menu {
+  @include tablets {
+    display: none;
+  }
+}
+
+.button {
+  @extend %button;
+}
+
+.hamburger {
+  margin-left: rem(30px);
+  margin-top: rem(10px);
+  height: rem(20px);
+  display: none;
+  vertical-align: middle;
+  align-items: center;
+ @include tablets {
+   display: flex;
+ }
+  &__item {
+    width: rem(30px);
+    height: rem(5px);
+    border-radius: rem(3px);
+    background-color: white;
+    margin-bottom: rem(10px);
+    transition: 4s;
+  }
+}
+  .img-bgfirst {
+    max-width: 100%;
+  }
+  .hello__img {
+    display: flex;
+   align-items: center;
+    @include tablets {
+      margin-bottom: rem(45px);
+      @include phones {
+        margin-bottom: 5%;
+      }
+    }
+  }
