@@ -24,12 +24,7 @@ left: 45%;
   @include tablets {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    // @include phones {
-    //   padding: left 3%;
-    //   padding-right: 3%;
-    // }
-    
+    align-items: center; 
   }
 }
 
@@ -93,8 +88,6 @@ left: 45%;
       align-items: center;
       justify-content: center;
       flex-direction: column; 
-      // padding-left: 3%;
-      // padding-right: 3%;
     }
   }
 }

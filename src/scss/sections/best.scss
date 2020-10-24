@@ -1,0 +1,71 @@
+.best {
+    background-image: url('../img/best/bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+    display: flex;
+    &__title{
+          color: #2f3234;
+          font-family: Lifehack;
+          font-size: rem(24px);
+          font-weight: 500;
+          margin-bottom: rem(20px);
+          text-align: center;
+
+          @include phones {
+              text-align: left;
+          }
+    }
+    &__list{
+         display: flex;
+         justify-content: space-between;
+
+         @include phones {
+             flex-direction: column;
+             margin-left: 5%;
+             justify-content: center;
+         }
+    }
+    &__item {
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        &:first-child{
+            margin-left: 0;
+        }
+        @include phones {
+            width: 98%;
+            flex-direction: row;
+            margin-bottom: 6%;
+        }
+    }
+    &__decription{
+        display: flex;
+        text-align: center;
+        color: #2f3234;
+        font-family: Ubuntu;
+        font-size: rem(14px);
+        font-weight: 300;
+
+        @include phones {
+            text-align: left;
+        }
+    }
+    &__logo{
+          min-height: rem(97px);
+          min-width: rem(89px);
+          margin-bottom: rem(35px);
+          text-align: center;
+
+          @include phones {
+              text-align: left;
+              margin-right: 20px;
+          }
+    }
+    &__wrap{
+          @include phones {
+              text-align: left;
+              margin-left: rem(20px);
+          }
+    }
+}
