@@ -1,0 +1,246 @@
+.section-title_order {
+    @extend %title;
+    margin-bottom: rem(50px);
+
+    @include tablets {
+        text-align: center;
+    }
+
+    @include phones {
+        font-size: 50px;
+        margin-bottom: 6%;
+        text-align: center;
+    }
+}
+
+.order {
+    background: url('../img/order/orderbg.jpg') center center / cover no-repeat;
+    justify-content: center;
+    height: 100%;
+    min-height: rem(650px);
+    display: flex;
+}
+
+.form {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+
+    @include tablets {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    @include phones {
+        width: 98%;
+    }
+    &__block--flat {
+        @include phones {
+            margin-right: 0;
+        }
+    }
+    &__part {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        margin-left: rem(20px);
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        @include tablets {
+            margin-left: 0;
+            width: 100%;
+            padding-left: 10%;
+            padding-right: 10%;
+            padding-top: 0;
+        }
+
+        @include phones {
+            padding-left: 3%;
+            padding-right: 3%;
+        }
+    }
+    &__input {
+        border: none;
+        border-radius: rem(5px);
+        padding: rem(8px) rem(20px);
+        width: 100%;
+        outline: none;
+        border: rem(2px) solid transparent;
+
+        &:focus {
+            border: rem(2px) solid $yellow;
+            transition: 2s;
+        }
+    }
+    &__title {
+        color: #ffffff;
+        font-family: Ubuntu;
+        font-size: rem(14px);
+        font-weight: 300;
+        margin-bottom: rem(5px);
+    }
+    &__row {
+        display: flex;
+        margin-bottom: rem(20px);
+        &--radio {
+            @include phones {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 6%;
+
+            }
+        }
+        &--comment {
+            @include phones {
+                margin-bottom: 6%;
+            }
+        }
+        &--check {
+            @include phones {
+                width: 60%;
+                display: flex;
+                justify-content: center;
+                margin-bottom: 6%;
+
+            }
+        }
+        @include phones {
+            margin-bottom: rem(10px);
+        }
+    }
+    &__block {
+        flex: 1;
+        margin-right: rem(20px);
+        &--floor {
+            @include phones {
+                display: none;
+            }
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    &__textarea {
+        border: none;
+        border-radius: rem(5px);
+        padding: rem(8px) rem(20px);
+        width: 100%;
+        height: rem(110px);
+        resize: none;
+        outline: none;
+        border: rem(2px) solid transparent;
+
+        &:focus {
+            border: rem(2px) solid $yellow;
+            transition: 2s;
+        }
+    }
+    &__radio {
+        margin-left: rem(20px);
+        position: relative;
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+        &-title {
+            color: #ffffff;
+            font-family: Ubuntu;
+            font-size: rem(14px);
+            font-weight: 300;
+            margin-left: rem(5px);
+        }
+        &-input {
+            position: absolute;
+            top: 0;
+            left: rem(-999999px);
+        }
+        &-changed {
+            width: rem(16px);
+            height: rem(16px);
+            position: relative;
+            border-radius: 50%;
+            background: white;
+
+            &:before {
+                content: "";
+                position: absolute;
+                width: 0;
+                height: 0;
+                border-radius: 50%;
+                background: orangered;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+    &__checkbox {
+        display: flex;
+        align-items: center;
+        background: white;
+        white-space: nowrap;
+        width: rem(16px);
+        height: rem(16px);
+        position: relative;
+        &-title {
+            color: #ffffff;
+            font-family: Ubuntu;
+            font-size: rem(14px);
+            font-weight: 300;
+            margin-left: rem(20px);
+        }
+        &-in {
+            position: absolute;
+            top: 0;
+            left: rem(-99220px);
+        }
+        &-changed {
+            position: relative;
+            border-radius: 50%;
+            background: white;
+
+            &:before {
+                content: "";
+                position: absolute;
+                width: 0;
+                height: 0;
+                border-radius: 50%;
+                background-image: url('../check.png');
+                top: 50%;
+                left: 500%;
+                transform: translate(40%, -50%);
+            }
+        }
+    }
+    &__buttons {
+        display: flex;
+
+        @include phones {
+            justify-content: center;
+        }
+    }
+}
+.button_clear {
+    background-color: #2f3234;
+    color: #ffffff;
+    background-color: #2f3234;
+
+    &:hover {
+        background-color: gray;
+    }
+
+    margin-left: rem(10px);
+}
+.form__radio-input:checked+.form__radio-changed::before {
+    width: rem(8px);
+    height: rem(8px);
+}
+.form__checkbox-in:checked+.form__checkbox-changed::before {
+    width: rem(10px);
+    height: rem(10px);
+}

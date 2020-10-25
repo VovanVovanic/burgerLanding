@@ -1,0 +1,125 @@
+.feeds {
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__item {
+        width: 25%;
+        height: 50%;
+
+        @include tablets {
+            width: 50%;
+            height: 25%;
+        }
+    }
+}
+
+@each $feed__img in (1, 2, 3, 4, 5, 6, 7, 8) {
+    .feed__img--#{$feed__img} {
+        background: url('../img/feeds/#{$feed__img}.png');
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-repeat: no-repeat;
+        background-position: 50%;
+        filter: grayscale(100%);
+        z-index: -1;
+        background-size: cover;
+    }
+}
+
+.feed {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        padding-left: rem(20px);
+        padding-right: rem(20px);
+        opacity: 0;
+        transform: scale(0.5);
+        transition: 5s;
+        overflow: y-auto;
+        background-color: rgba(20, 20, 20, 0.8);
+
+        @include tablets {
+            text-align: center;
+            align-items: center;
+        }
+    }
+
+    &:hover .feed__content {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    &__title {
+        color: #ffffff;
+        font-family: Gagalin;
+        font-size: rem(14px);
+        font-weight: 400;
+        line-height: rem(28.11px);
+
+        @include phones {
+            margin-bottom: rem(25px);
+            font-size: 24px;
+        }
+    }
+
+    &__descr {
+        color: #ffffff;
+        font-family: Ubuntu;
+        font-size: rem(14px);
+        font-weight: 300;
+        line-height: rem(24px);
+
+        @include tablets {
+            margin-bottom: rem(30px);
+        }
+
+        @include phones {
+            display: none;
+        }
+    }
+
+}
+
+.button_black {
+    @extend %button;
+    background-color: #2f3234;
+
+    &:hover {
+        background-color: gray;
+    }
+
+    @include phones {
+        display: none;
+    }
+}
+
+.button_phone {
+    font-family: Ubuntu;
+    font-weight: 500;
+    font-size: 12px;
+    @extend %button;
+    background-color: #2f3234;
+
+    &:hover {
+        background-color: gray;
+    }
+
+    display: none;
+
+    @include phones {
+        display: flex;
+    }
+}
