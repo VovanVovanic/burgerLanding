@@ -126,6 +126,7 @@
     display: flex;
     height: 0;
     overflow: hidden;
+    transition: .5s all;
 
     @include tablets {
       flex-direction: column;
@@ -143,8 +144,11 @@
 }
 
 .acco__item--active {
+  margin-bottom: 110px;
   .acco__content {
     height: auto;
+   
+    
   }
   .acco__trigger {
     color: $yellow;
