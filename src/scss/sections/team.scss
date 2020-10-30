@@ -121,9 +121,10 @@
       text-align: center;
     }
   }
-
-  &__content {
-    display: flex;
+&__content {
+  display: flex;
+}
+  &__content-wrap {
     height: 0;
     overflow: hidden;
     transition: .5s all;
@@ -144,11 +145,8 @@
 }
 
 .acco__item--active {
-  margin-bottom: 110px;
   .acco__content {
     height: auto;
-   
-    
   }
   .acco__trigger {
     color: $yellow;
