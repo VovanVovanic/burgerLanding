@@ -11,8 +11,24 @@ height: rem(14px);
 position: absolute;
 top: 95%;
 left: 45%;
+&-footer{
+width: rem(120px);
+height: rem(64px);
+left: 0;
+top: 30%;
+z-index: 1234;
+color: cornsilk;
+text-align: center;
+padding: 5px;
+background-color: crimson;
+}
 &__link {
   display: flex;
+}
+.scroll__img-footer{
+  transform: rotate(180deg);
+  width: rem(39px);
+  height: rem(24px);
 }
 }
 .header {

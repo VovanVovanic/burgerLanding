@@ -3,7 +3,6 @@ const display = $(".maincontent");
 // const mobileDetect = new MobileDetect(window.navigator.userAgent);
 // const isMobile = mobileDetect.mobile();
 let inscroll = false;
-console.log('ok')
 sections.filter(":first-child").addClass("active");
 
 const performTransition = (sectionEq) => {
@@ -68,11 +67,19 @@ const scrollToSection = (direction) => {
   if (inscroll) return;
 
   if (direction === "up" && section.nextSection.length) {
+
     performTransition(section.nextSection.index());
   }
 
+
   if (direction === "down" && section.prevSection.length) {
-    performTransition(section.prevSection.index());
+      if (section.activeSection[0].classList.contains("contacts")) {
+        return;
+      } else {
+        performTransition(section.prevSection.index());
+      }
+    
+
   }
 };
 //sidebar

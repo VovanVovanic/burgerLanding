@@ -1,0 +1,118 @@
+.contacts {
+    background: url('../img/contacts/map.jpg') center center no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 100%;
+    min-height: rem(650px);
+}
+
+.footer {
+    width: 100%;
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+    padding: rem(10px) rem(0px);
+    &__container {
+        max-width: rem(940px);
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        padding-left: 2%;
+        padding-right: 2%;
+
+        @include phones {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+    }
+    &__right {
+        width: 50%;
+        display: flex;
+
+        @include phones {
+            width: 100%;
+        }
+    }
+    &__left {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+
+        @include phones {
+            width: 100%;
+            align-items: center;
+            margin-bottom: 4%;
+        }
+    }
+    &__address {
+        color: #ffffff;
+        font-family: Ubuntu;
+        font-size: rem(14px);
+        font-weight: 300;
+        margin-bottom: rem(5px);
+    }
+    &__phone {
+        color: #e45028;
+        font-family: Ubuntu;
+        font-weight: 700;
+        display: flex;
+
+        &:hover {
+            color: gold;
+            transition: 3s;
+        }
+    }
+
+}
+
+.social {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    &__link {
+        display: flex;
+    }
+    &__icon {
+        width: rem(20px);
+        height: rem(20px);
+        display: flex;
+        fill: gray;
+
+        &:hover {
+            fill: white;
+            transition: 3s;
+            transform: scale(1.5);
+        }
+    }
+    @include phones {
+        justify-content: center;
+    }
+
+    &__item {
+        margin-left: rem(20px);
+
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+}
+
+
+.phone__icon {
+    width: rem(12px);
+    height: rem(12px);
+    display: flex;
+    fill: #e45028;
+    margin-top: rem(5px);
+    margin-right: rem(10px);
+
+    &:hover {
+        fill: gold;
+        transition: 3s;
+        transform: scale(1.5) rotate(50deg);
+        transform-origin: center;
+    }
+}
