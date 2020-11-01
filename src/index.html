@@ -823,32 +823,32 @@
         <section class="section order">
           <div class="container">
             <h2 class="section-title section-title_order">закажите доставку</h2>
-            <form action="#" method="post" class="form" id="order-form">
+            <form action="#" class="form" id="order-form">
               <div class="form__part">
                 <div class="form__row">
                   <label class="form__block" for="user-name">
                     <div class="form__title">Имя</div>
-                    <input type="text" class="form__input" id="user-name"
-                      name="user-name">
+                    <input type="text" class="form__input" id="name"
+                      name="name" data-validate-field="name">
                   </label>
                   <label class="form__block" for="phone">
                     <div class="form__title">Телефон</div>
                     <input type="tel" class="form__input" name="phone"
-                      id="phone">
+                      id="phone" data-validate-field="phone">
                   </label>
                 </div>
                 <div class="form__row">
                   <label class="form__block" for="street">
                     <div class="form__title">Улица</div>
                     <input type="text" class="form__input" name="street"
-                      id="street">
+                      id="street" data-validate-field="street">
                   </label>
                 </div>
                 <div class="form__row">
                   <label class="form__block" for="house">
                     <div class="form__title">Дом</div>
                     <input type="number" class="form__input" id="house"
-                      name="house">
+                      name="house" data-validate-field="house">
                   </label>
                   <label class="form__block" for="block">
                     <div class="form__title">Корпус</div>
@@ -858,7 +858,7 @@
                   <label class="form__block form__block--flat" for="flat">
                     <div class="form__title">Квартира</div>
                     <input type="number" class="form__input" id="flat"
-                      name="flat">
+                      name="flat" data-validate-field="flat">
                   </label>
                   <label class="form__block form__block--floor" for="floor">
                     <div class="form__title">Этаж</div>
@@ -1059,11 +1059,13 @@
     <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="template" id="overlayTemplate"></script>
+     <script src="js/just-validate.min.js"></script>
     <script src="js/slider.js"></script>
     <script src="js/acco.js"></script>
     <script src="js/popUp.js"></script>
     <script src="js/drop.js"></script>
     <script src="js/scroll.js"></script>
+    <script src="js/form.js"></script>
     <script src="js/map.js"></script>
     <script defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAcMROjEGHf16iegsETXDBRHx3QScahSKg&callback=initMap">
