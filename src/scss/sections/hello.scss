@@ -21,6 +21,9 @@ color: cornsilk;
 text-align: center;
 padding: 5px;
 background-color: crimson;
+@include phsmall{
+background-color: rgba(220, 20, 60, .4);
+}
 }
 &__link {
   display: flex;
