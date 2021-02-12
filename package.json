@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "description": "training project",
   "main": "index.js",
+  "homepage": "https://VovanVovanic.github.io/burgerLanding",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "author": "",
   "license": "ISC",
@@ -16,5 +19,8 @@
     "gulp-cli": "^2.3.0",
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^4.1.0"
+  },
+  "dependencies": {
+    "gh-pages": "^3.1.0"
   }
 }
